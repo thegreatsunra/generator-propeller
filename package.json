@@ -1,7 +1,7 @@
 {
   "name": "generator-propeller",
   "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "description": "Yeoman generator for Propeller, a static site generator built on Assemble and Bootstrap 3",
   "keywords": [
     "yeoman-generator"
   ],
