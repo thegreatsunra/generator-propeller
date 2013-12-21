@@ -1,6 +1,28 @@
 {
-  "name": "package",
-  "version": "0.0.0",
-  "dependencies": {}
+  "name": "propeller",
+  "version": "0.4.3",
+  "homepage": "http://propellerjs.com",
+  "authors": [
+    "Dane Petersen"
+  ],
+  "description": "Static Site Generator in Assemble and Bootstrap 3",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "csv-js": "https://github.com/cparker15/CSV-js.git#~0.2.5",
+    "d3": "~3.3.12",
+    "jquery": "~1.10.2",
+    "knockout.js": "~3.0.0",
+    "lesshat": "~2.0.13",
+    "lodash": "~2.4.1",
+    "moment": "~2.4.0",
+    "requirejs": "~2.1.9"
+  }
 }
-
