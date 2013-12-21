@@ -1,0 +1,41 @@
+{
+  "name": "generator-propeller",
+  "version": "0.0.0",
+  "description": "A generator for Yeoman",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/thegreatsunra/generator-propeller",
+  "bugs": "https://github.com/thegreatsunra/generator-propeller/issues",
+  "author": {
+    "name": "Dane Petersen",
+    "email": "",
+    "url": "https://github.com/thegreatsunra"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thegreatsunra/generator-propeller.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.14.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
