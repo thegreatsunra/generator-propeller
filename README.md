@@ -1,7 +1,6 @@
 # generator-propeller [![Build Status](https://secure.travis-ci.org/thegreatsunra/generator-propeller.png?branch=master)](https://travis-ci.org/thegreatsunra/generator-propeller)
 
-A generator for [Yeoman](http://yeoman.io).
-
+[Yeoman](http://yeoman.io) generator for [Propeller](http://propellerjs.com), a static site generator built on [Assemble](http://assemble.io) and [Bootstrap 3](http://getbootstrap.com).
 
 ## Getting Started
 
