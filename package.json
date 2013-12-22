@@ -1,9 +1,11 @@
 {
   "name": "generator-propeller",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Yeoman generator for Propeller, a static site generator built on Assemble and Bootstrap 3",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "assemble",
+    "grunt"
   ],
   "homepage": "https://github.com/thegreatsunra/generator-propeller",
   "bugs": "https://github.com/thegreatsunra/generator-propeller/issues",
