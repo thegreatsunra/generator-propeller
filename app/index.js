@@ -37,15 +37,17 @@ PropellerGenerator.prototype.askFor = function askFor() {
 };
 
 PropellerGenerator.prototype.app = function app() {
-  this.mkdir('app');
-  this.mkdir('app/templates');
-
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
   this.copy('_Gruntfile.js', 'Gruntfile.js');
+  this.directory('src', 'src');
 };
 
 PropellerGenerator.prototype.projectfiles = function projectfiles() {
+  this.copy('bowerrc', '.bowerrc');
   this.copy('editorconfig', '.editorconfig');
+  this.copy('gitignore', '.gitignore');
   this.copy('jshintrc', '.jshintrc');
+
+  this.copy('npmignore', '.npmignore');
 };
