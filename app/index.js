@@ -23,16 +23,14 @@ PropellerGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var prompts = [
-    // {
-    //   type: 'confirm',
-    //   name: 'someOption',
-    //   message: 'Would you like to enable this option?',
-    //   default: true
-    // }
+    {
+      name: 'siteName',
+      message: 'What is the name of your site?'
+    }
   ];
 
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+    this.siteName = props.siteName;
 
     cb();
   }.bind(this));
