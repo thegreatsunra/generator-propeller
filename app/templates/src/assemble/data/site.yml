@@ -1,5 +1,5 @@
-title:            "Starter Template for Bootstrap"
-author:           "Propeller"
+title:            "<%= siteName %>"
+author:           ""
 year:             "2013"
 componentsFolder: "app/components"
 cssFolder:        "app/css"
