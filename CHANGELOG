@@ -1,3 +1,8 @@
+v0.2.1:
+  date: "2013-12-22"
+  changes:
+    - Remove extaneous files from generated app
+    - Add prompt and variable for site name
 v0.2.0:
   date: "2013-12-22"
   changes:
