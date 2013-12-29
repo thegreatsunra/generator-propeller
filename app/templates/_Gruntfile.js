@@ -31,14 +31,41 @@ module.exports = function (grunt) {
       jsMainFile:       'scripts'
     },
 
-    // concat all javascripts into a single file
-    concat: {
-      options: {
-        separator: ';'
+    // watch for file changes and run tasks in response
+    watch: {
+      js: {
+        files: ['<%= config.src %>/<%= config.jsFolder %>/{,*/}*.js'],
+        tasks: ['jshint', 'copy'],
+        options: {
+          livereload: true
+        }
       },
-      dist: {
-        src: ['<%= config.src %>/<%= config.jsFolder %>/**/*.js'],
-        dest: '<%= config.dist %>/<%= config.jsFolder %>/<%= config.jsMainFile %>.js'
+      less: {
+        files: ['<%= config.src %>/<%= config.cssFolder %>/{,*/}*.{css,less}'],
+        tasks: ['less']
+      },
+      gruntfile: {
+        files: ['Gruntfile.js']
+      },
+      assemble: {
+        files: ['<%= config.src %>/assemble/{,*/}*.{hbs,yml,json}'],
+        tasks: ['assemble']
+      },
+      data: {
+        files: ['<%= config.src %>/<%= config.dataFolder %>/{,*/}*.csv'],
+        tasks: ['convert', 'copy']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        },
+        files: [
+          '<%= config.dist %>/{,*/}*.html',
+          '<%= config.dist %>/<%= config.cssFolder %>/{,*/}*.css',
+          '<%= config.dist %>/<%= config.jsFolder %>/{,*/}*.js',
+          '<%= config.dist %>/<%= config.dataFolder %>/{,*/}*.csv',
+          '<%= config.dist %>/<%= config.imgFolder %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+        ]
       }
     },
 
@@ -112,6 +139,10 @@ module.exports = function (grunt) {
             dot: true
           }
         ]
+    // concat all javascripts into a single file
+    concat: {
+      options: {
+        separator: ';'
       },
 
       // copy bower components as well
@@ -216,38 +247,7 @@ module.exports = function (grunt) {
           }
         ]
       }
-    },
-
-    // watch for file changes and run tasks in response
-    watch: {
-      js: {
-        files: ['<%= jshint.files %>'],
-        tasks: ['jshint', 'copy:js']
-      },
-      assemble: {
-        files: ['<%= config.src %>/assemble/**/*.{hbs,yml,json}'],
-        tasks: ['assemble']
-      },
-      less: {
-        files: ['<%= config.src %>/<%= config.cssFolder %>/**/*.{css,less}'],
-        tasks: ['less']
-      },
-      data: {
-        files: ['<%= config.src %>/<%= config.dataFolder %>/**/*.csv'],
-        tasks: ['convert', 'copy:data']
-      },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>'
-        },
-        files: [
-          '<%= config.dist %>/**/*.html',
-          '<%= config.dist %>/<%= config.cssFolder %>/**/*.css',
-          '<%= config.dist %>/<%= config.jsFolder %>/**/*.js',
-          '<%= config.dist %>/<%= config.dataFolder %>/**/*.csv'
-        ]
-      }
-    },
+    }
   });
 
   // load assemble manually because it doesn't match the grunt-* pattern
