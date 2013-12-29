@@ -69,14 +69,25 @@ module.exports = function (grunt) {
       }
     },
 
-    // compress concatenated javascripts
-    uglify: {
+    // The actual grunt server settings
+    connect: {
       options: {
-        banner: '/*! <%= config.jsMainFile %>.js (generated <%= grunt.template.today("dd-mm-yyyy") %>) */\n'
+        port: 9000,
+        // Change this to '0.0.0.0' to access the server from outside.
+        hostname: 'localhost',
+        livereload: 35729
+      },
+      livereload: {
+        options: {
+          open: true,
+          base: [
+            '<%= config.dist %>'
+          ]
+        }
       },
       dist: {
-        files: {
-          '<%= config.dist %>/<%= config.jsFolder %>/<%= config.jsMainFile %>.min.js': ['<%= concat.dist.dest %>']
+        options: {
+          base: '<%= config.dist %>'
         }
       }
     },
@@ -225,23 +236,7 @@ module.exports = function (grunt) {
       }
     },
 
-    // create connect server
-    connect: {
-      options: {
-        port: 9000,
-        livereload: 35729,
-        // change this to '0.0.0.0' to access the server from outside
-        hostname: 'localhost'
-      },
-      livereload: {
-        options: {
-          open: true,
-          base: [
-            '<%= config.dist %>'
-          ]
-        }
-      }
-    },
+
 
     // convert all CSV files into JSON files for Assemble
     convert: {
