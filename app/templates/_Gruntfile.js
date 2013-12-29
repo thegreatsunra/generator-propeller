@@ -170,17 +170,17 @@ module.exports = function (grunt) {
     assemble: {
       options: {
         plugins: ['assemble-contrib-permalinks'],
-        helpers: ['<%= config.src %>/assemble/helpers/**/*.js']
+        helpers: ['<%= config.src %>/assemble/helpers/{,*/}*.js']
       },
       pages: {
         options: {
           flatten: true,
           layout: '<%= config.src %>/assemble/layouts/default.hbs',
-          data: '<%= config.src %>/assemble/data/**/*.{json,yml}',
-          partials: '<%= config.src %>/assemble/partials/**/*.hbs'
+          data: '<%= config.src %>/assemble/data/{,*/}*.{json,yml}',
+          partials: '<%= config.src %>/assemble/partials/{,*/}*.hbs'
         },
         files: {
-          '<%= config.dist %>/': ['<%= config.src %>/assemble/pages/**/*.hbs']
+          '<%= config.dist %>/': ['<%= config.src %>/assemble/pages/{,*/}*.hbs']
         }
       }
     },
