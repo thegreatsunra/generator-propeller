@@ -94,75 +94,84 @@ module.exports = function (grunt) {
       ],
     },
 
-    // copy assets into root of destination
+    // Empties folders to start fresh
+    clean: {
+      dist: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '<%= config.dist %>/*',
+            '!<%= yeoman.dist %>/.git*',
+            '<%= config.src %>/assemble/<%= config.dataFolder %>/*.json'
+          ]
+        }]
+      },
+      server: '.tmp'
+    },
+
+    // Copies remaining files to places other tasks can use
     copy: {
-      data: {
-        files: [
-          {
-            expand: true,
-            cwd: '<%= config.src %>/<%= config.dataFolder %>',
-            src: '**',
-            dest: '<%= config.dist %>/<%= config.dataFolder %>',
-          }
-        ]
-      },
+      dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= config.src %>',
+          dest: '<%= config.dist %>',
+          src: [
+            '*.{ico,png,txt,xml}',
+            '.htaccess',
+            '*.html',
+            'views/{,*/}*.html',
+            '<%= config.componentsFolder %>/**/*',
+            '<%= config.imgFolder %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '<%= config.fontsFolder %>/*',
+            '<%= config.dataFolder %>/{,*/}*',
+            '<%= config.jsFolder %>/{,*/}*.js'
+          ]
+        }]
+      }
+    },
 
-      img: {
-        files: [
-          {
-            expand: true,
-            cwd: '<%= config.src %>/<%= config.imgFolder %>',
-            src: '**',
-            dest: '<%= config.dist %>/<%= config.imgFolder %>',
-          }
-        ]
-      },
+    // Run some tasks in parallel to speed up the build process
+    // concurrent: {
+    //   server: [
+    //     'copy:styles'
+    //   ],
+    //   test: [
+    //     'copy:styles'
+    //   ],
+    //   dist: [
+    //     'copy:styles',
+    //     'imagemin',
+    //     'svgmin'
+    //   ]
+    // },
 
-      js: {
-        files: [
-          {
-            expand: true,
-            cwd: '<%= config.src %>/<%= config.jsFolder %>',
-            src: '**/*.js',
-            dest: '<%= config.dist %>/<%= config.jsFolder %>',
-          }
-        ]
-      },
-
-      src: {
-        files: [
-          {
-            expand: true,
-            cwd: '<%= config.src %>/',
-            src: ['*', '!assemble'],
-            dest: '<%= config.dist %>/',
-            dot: true
-          }
-        ]
     // concat all javascripts into a single file
     concat: {
       options: {
         separator: ';'
       },
-
-      // copy bower components as well
-      components: {
-        files: [
-          {
-            expand: true,
-            cwd: '<%= config.src %>/<%= config.componentsFolder %>',
-            src: '**',
-            dest: '<%= config.dist %>/<%= config.componentsFolder %>',
-            dot: true
-          }
-        ]
+      dist: {
+        src: ['<%= config.src %>/<%= config.jsFolder %>/{,*/}*.js'],
+        dest: '<%= config.dist %>/<%= config.jsFolder %>/<%= config.jsMainFile %>.js'
       }
     },
 
-    // clean out destination folder by brute force
-    clean: {
-      main: ['<%= config.dist %>/**/*', '<%= config.dist %>/.*', '<%= config.src %>/assemble/<%= config.dataFolder %>/*.json'],
+    // compress concatenated javascripts
+    uglify: {
+      options: {
+        banner: '/*! <%= config.jsMainFile %>.js (generated <%= grunt.template.today("dd-mm-yyyy") %>) */\n'
+      },
+      dist: {
+        files: {
+          '<%= config.dist %>/<%= config.jsFolder %>/<%= config.jsMainFile %>.min.js': ['<%= concat.dist.dest %>']
+        }
+      }
     },
+
+
 
     // compile all non-partial LESS files into CSS
     // and copy all CSS files into their appropriate location as well
