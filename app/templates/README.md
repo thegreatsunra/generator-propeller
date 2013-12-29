@@ -11,8 +11,8 @@ Static site generator in [Assemble](http://assemble.io) and [Bootstrap 3](http:/
 
 ### Get started with Propeller
 
-1. Once Yeoman is finished creating your new app, type `grunt build` at the command line to generate your static site, which will appear in a `/dist` folder
-1. Type `grunt` to start your development server. Propeller will monitor the files in the `/src` folder, and update your static site whenever it detects changes
+1. Once Yeoman is finished creating your new app, type `grunt` at the command line to generate your static site, which will appear in a `/dist` folder
+1. Type `grunt serve` to start your development server. Propeller will monitor the files in the `/src` folder, and update your static site whenever it detects changes
 1. Open [http://localhost:9000](http://localhost:9000) in your web browser to view your site
 1. Begin creating your site by modifying the files in the `/src` folder
 
