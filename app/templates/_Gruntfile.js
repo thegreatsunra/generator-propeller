@@ -54,9 +54,17 @@ module.exports = function (grunt) {
       }
     },
 
-    // run jshint against all javascripts, including Gruntfile
+    // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
-      files: ['Gruntfile.js', '<%= config.src %>/<%= config.jsFolder %>/**/*.js']
+      options: {
+        jshintrc: '.jshintrc',
+        reporter: require('jshint-stylish'),
+        force: true
+      },
+      all: [
+        'Gruntfile.js',
+        '<%= config.src %>/<%= config.jsFolder %>/{,*/}*.js'
+      ],
     },
 
     // copy assets into root of destination
