@@ -189,8 +189,6 @@ module.exports = function (grunt) {
       }
     },
 
-
-
     // compile all non-partial LESS files into CSS
     // and copy all CSS files into their appropriate location as well
     less: {
@@ -243,8 +241,6 @@ module.exports = function (grunt) {
       }
     },
 
-
-
     // convert all CSV files into JSON files for Assemble
     convert: {
       csvs: {
@@ -275,7 +271,6 @@ module.exports = function (grunt) {
     grunt.task.run(['serve']);
   });
 
-  // create build task
   grunt.registerTask('build', [
     'clean',
     'convert',
