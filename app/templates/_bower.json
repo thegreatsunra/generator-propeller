@@ -15,7 +15,7 @@
     "knockout.js": "~3.0.0",
     "lesshat": "~2.0.13",
     "lodash": "~2.4.1",
-    "moment": "~2.4.0",
+    "moment": "~2.5.0",
     "requirejs": "~2.1.9"
   }
 }
