@@ -33,6 +33,7 @@ module.exports = function (grunt) {
       cssFolder:        'app/css',
       imgFolder:        'app/img',
       dataFolder:       'app/data',
+      fontsFolder:      'app/fonts',
       cssMainFile:      'styles',
       jsMainFile:       'scripts'
     },
