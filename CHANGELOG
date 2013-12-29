@@ -1,3 +1,11 @@
+v0.3.0:
+  date: "2013-12-29"
+  changes:
+    - Align templates, dotfiles and Gruntfile with generator-angular 0.7.1
+    - When globbing, only match one level down by default
+    - Default grunt task is now `grunt build`
+    - Grunt task to start server is now available via `grunt server` and `grunt serve`
+    - Bump versions on grunt-contrib-copy, grunt-contrib-jshint, grunt-contrib-connect, grunt-newer, and MomentJS
 v0.2.1:
   date: "2013-12-22"
   changes:
