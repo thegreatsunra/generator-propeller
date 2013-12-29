@@ -242,11 +242,19 @@ module.exports = function (grunt) {
     },
   });
 
-  // automatically load all grunt-* tasks in --save-dev
-  require('load-grunt-tasks')(grunt);
-
   // load assemble manually because it doesn't match the grunt-* pattern
   grunt.loadNpmTasks('assemble');
+
+  // create server task
+  grunt.registerTask('serve', [
+    'connect:livereload',
+    'watch'
+  ]);
+
+  grunt.registerTask('server', function () {
+    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+    grunt.task.run(['serve']);
+  });
 
   // create build task
   grunt.registerTask('build', [
@@ -258,14 +266,8 @@ module.exports = function (grunt) {
     'assemble'
   ]);
 
-  // create server task
-  grunt.registerTask('server', [
-    'connect',
-    'watch'
-  ]);
-
   // set default grunt task
   grunt.registerTask('default', [
-    'server'
+    'build'
   ]);
 };
