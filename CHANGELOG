@@ -10,4 +10,4 @@ v0.2.0:
 v0.1.0:
   date: "2013-12-22"
   changes:
-    - Initial release
+    - Initial release with Propeller 0.4.3
