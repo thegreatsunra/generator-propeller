@@ -46,8 +46,8 @@ PropellerGenerator.prototype.app = function app() {
 PropellerGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('bowerrc', '.bowerrc');
   this.copy('editorconfig', '.editorconfig');
+  this.copy('gitattributes', '.gitattributes');
   this.copy('gitignore', '.gitignore');
   this.copy('jshintrc', '.jshintrc');
-
   this.copy('npmignore', '.npmignore');
 };
