@@ -1,19 +1,12 @@
 {
   "name": "<%= _.slugify(siteName) %>",
+  "description": "<%= siteName %>",
   "version": "0.0.0",
   "homepage": "",
   "authors": [
     ""
   ],
-  "description": "<%= (siteName) %>",
   "license": "",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
     "bootstrap": "~3.0.3",
     "csv-js": "https://github.com/cparker15/CSV-js.git#~0.2.5",
