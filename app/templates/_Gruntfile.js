@@ -43,7 +43,7 @@ module.exports = function (grunt) {
     watch: {
       js: {
         files: ['<%= config.src %>/<%= config.jsFolder %>/{,*/}*.js'],
-        tasks: ['jshint', 'copy'],
+        tasks: ['newer:jshint', 'newer:copy'],
         options: {
           livereload: true
         }
