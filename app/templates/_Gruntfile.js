@@ -55,8 +55,12 @@ module.exports = function (grunt) {
       gruntfile: {
         files: ['Gruntfile.js']
       },
+      pages: {
+        files: ['<%= config.src %>/assemble/pages/{,*/}*.hbs'],
+        tasks: ['newer:assemble']
+      },
       assemble: {
-        files: ['<%= config.src %>/assemble/{,*/}*.{hbs,yml,json}'],
+        files: ['<%= config.src %>/assemble/{helpers,layouts,partials}/{,*/}*.{hbs,yml,json,js}'],
         tasks: ['assemble']
       },
       data: {
