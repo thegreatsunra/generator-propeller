@@ -65,7 +65,7 @@ module.exports = function (grunt) {
       },
       data: {
         files: ['<%= config.src %>/<%= config.dataFolder %>/{,*/}*.csv'],
-        tasks: ['convert', 'copy']
+        tasks: ['newer:convert', 'newer:assemble', 'newer:copy']
       },
       livereload: {
         options: {
