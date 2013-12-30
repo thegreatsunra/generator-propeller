@@ -1,3 +1,14 @@
+v0.3.2:
+  date: "2013-12-29"
+  changes:
+    - Update changelog
+v0.3.1:
+  date: "2013-12-29"
+  changes:
+    - Add assemble helpers to list of watched files
+    - Only run jshint on changed files
+    - Only run assemble on newer pages when pages are changed
+    - Run assemble on all pages when layouts, helpers and partials are changed
 v0.3.0:
   date: "2013-12-29"
   changes:
