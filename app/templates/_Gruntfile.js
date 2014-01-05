@@ -43,7 +43,7 @@ module.exports = function (grunt) {
     watch: {
       js: {
         files: ['<%= config.src %>/<%= config.jsFolder %>/{,*/}*.js'],
-        tasks: ['newer:jshint', 'newer:copy'],
+        tasks: ['newer:jshint', 'newer:copy:dist'],
         options: {
           livereload: true
         }
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
       },
       data: {
         files: ['<%= config.src %>/<%= config.dataFolder %>/{,*/}*.csv'],
-        tasks: ['newer:convert', 'newer:assemble', 'newer:copy']
+        tasks: ['newer:convert', 'newer:assemble', 'newer:copy:dist']
       },
       livereload: {
         options: {
