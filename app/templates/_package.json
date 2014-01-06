@@ -4,6 +4,16 @@
   "version": "0.0.0",
   "homepage": "",
   "author": "",
+  "licenses": [
+    {
+      "type": "",
+      "url": ""
+    }
+  ],
+  "repository": {
+    "type": "",
+    "url": ""
+  },
   "devDependencies": {
     "assemble": "~0.4.33",
     "assemble-contrib-permalinks": "~0.3.1",
