@@ -3,6 +3,7 @@
 # ================
 /dist
 /src/app/components
+/src/assemble/data/*.json
 
 
 # ================
