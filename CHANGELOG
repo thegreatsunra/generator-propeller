@@ -1,3 +1,13 @@
+v0.5.0:
+  date: "2014-01-09"
+  changes:
+    - From now on, propeller and propeller-generator share version numbers
+    - Add ignore rules for dot files, node_modules, components, and tests in Bower components
+    - Add placeholders in package.json for license and repository
+    - Add .htaccess file and other helpful dot files
+    - Add empty fonts folder
+    - Fix character encodings in csv files
+    - Fix jshint whitespace and single-quoted string errors in JS files
 v0.3.3:
   date: "2013-12-29"
   changes:
