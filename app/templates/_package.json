@@ -1,9 +1,12 @@
 {
   "name": "<%= _.slugify(siteName) %>",
   "description": "<%= siteName %>",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "",
-  "author": "",
+  "author": {
+    "name": "",
+    "url": ""
+  },
   "licenses": [
     {
       "type": "",
