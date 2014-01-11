@@ -24,8 +24,10 @@ PropellerGenerator.prototype.askFor = function askFor() {
 
   var prompts = [
     {
+      type: 'input',
       name: 'siteName',
-      message: 'What is the name of your site?'
+      message: 'Your project name',
+      default: this.appname
     }
   ];
 
