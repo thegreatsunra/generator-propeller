@@ -3,10 +3,7 @@
   "description": "<%= siteName %>",
   "version": "0.1.0",
   "homepage": "",
-  "author": {
-    "name": "",
-    "url": ""
-  },
+  "author": "",
   "licenses": [
     {
       "type": "",
@@ -15,6 +12,9 @@
   ],
   "repository": {
     "type": "",
+    "url": ""
+  },
+  "bugs": {
     "url": ""
   },
   "devDependencies": {
