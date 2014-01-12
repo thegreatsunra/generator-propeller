@@ -1,4 +1,4 @@
-# generator-propeller 0.5.2
+# generator-propeller 0.5.4
 
 > [Yeoman](http://yeoman.io) generator for [Propeller](http://propellerjs.com), a static site generator built on [Assemble](http://assemble.io) and [Bootstrap 3](http://getbootstrap.com).
 
@@ -6,7 +6,7 @@
 
 1. Download and install [Node](http://nodejs.org)
 1. At the command line install [Yeoman](http://yeoman.io), [Bower](http://bower.io) and [Grunt](http://gruntjs.com) globally by typing `sudo npm install -g yo bower grunt-cli`
-1. Install the Propeller generator for Yeoman by typing `npm install -g generator-assemble`
+1. Install the Propeller generator for Yeoman by typing `sudo npm install -g generator-assemble`
 
 ## Usage
 
