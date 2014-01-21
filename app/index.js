@@ -8,7 +8,12 @@ var PropellerGenerator = module.exports = function PropellerGenerator(args, opti
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] });
+    this.installDependencies({
+      skipInstall: options['skip-install'] || options['s'],
+      callback: function () {
+        this.spawnCommand('grunt', ['build']);
+      }.bind(this) // only run grunt build after succesful npm/bower install
+    });
   });
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
