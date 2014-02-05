@@ -1,5 +1,5 @@
 v0.5.5:
-  date: "2014-02-5"
+  date: "2014-02-05"
   changes:
     - Automatically run grunt build task after running generator-propeller
     - Disable HTML pretty task by default
