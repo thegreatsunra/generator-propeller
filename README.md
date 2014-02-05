@@ -27,6 +27,7 @@
 * The server also monitors for changes to [LESS](http://lesscss.org) files, and automatically compiles them into static CSS files when updated
 
 ## Resources
+
 * [propeller](http://propellerjs.com)
 * [assemble](http://assemble.io)
 * [yeoman](http://yeoman.io)
