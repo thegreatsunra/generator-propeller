@@ -1,4 +1,4 @@
-# generator-propeller 0.5.7
+# generator-propeller 0.5.8
 
 > [Yeoman](http://yeoman.io) generator for [Propeller](http://propellerjs.com), a static site generator built on [Assemble](http://assemble.io) and [Bootstrap 3](http://getbootstrap.com).
 
