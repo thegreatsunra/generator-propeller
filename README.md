@@ -6,7 +6,7 @@
 
 1. Download and install [Node](http://nodejs.org)
 1. At the command line install [Yeoman](http://yeoman.io), [Bower](http://bower.io) and [Grunt](http://gruntjs.com) globally by typing `sudo npm install -g yo bower grunt-cli`
-1. Install the Propeller generator for Yeoman by typing `sudo npm install -g generator-assemble`
+1. Install the Propeller generator for Yeoman by typing `sudo npm install -g generator-propeller`
 
 ## Usage
 
